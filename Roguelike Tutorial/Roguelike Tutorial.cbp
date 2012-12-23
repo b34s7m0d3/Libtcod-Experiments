@@ -13,10 +13,10 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-g" />
-					<Add directory="..\libtcod-1.5.0\include" />
+					<Add directory="..\libtcod-1.5.1\include" />
 				</Compiler>
 				<Linker>
-					<Add library="..\libtcod-1.5.0\lib\libtcod-mingw-debug.a" />
+					<Add library="..\libtcod-1.5.1\lib\libtcod-mingw-debug.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -37,6 +37,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Actor.cpp" />
+		<Unit filename="Actor.h" />
+		<Unit filename="Engine.cpp" />
+		<Unit filename="Engine.h" />
+		<Unit filename="Map.cpp" />
+		<Unit filename="Map.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

@@ -1,51 +1,25 @@
-// Code based on tutorial: http://roguebasin.roguelikedevelopment.org/index.php/Complete_Roguelike_Tutorial,_using_python%2Blibtcod,_part_1
+/* Tutorial Source: http://codeumbra.eu/complete-roguelike-tutorial-using-c-and-libtcod-part-1-setting-up
+ * Creating classes in CodeBlocks: http://www.youtube.com/watch?v=2fTsbQUP_no
+ */
 #include "libtcod.hpp"
+#include "Actor.h"
+#include "Map.h"
+#include "Engine.h"
 
-int SCREEN_WIDTH = 80;
-int SCREEN_HEIGHT = 50;
-int playerx, playery;
-bool HandleKeys();
+Engine engine;
 
 int main()
 {
-    TCODConsole::setCustomFont("arial10x10.png", TCOD_FONT_LAYOUT_TCOD, 0, 0);
-    TCODConsole::initRoot(SCREEN_WIDTH, SCREEN_HEIGHT, "Libtcod Tutorial");
-
-    playerx = SCREEN_WIDTH / 2;
-    playery = SCREEN_HEIGHT / 2;
-
-    bool exit;
+    bool exitFlagged;
     while(!TCODConsole::isWindowClosed())
     {
-        TCODConsole::root->clear();
-        TCODConsole::root->setForegroundColor(TCODColor::white);
-        TCODConsole::root->printLeft(playerx, playery, TCOD_BKGND_NONE, "@");
-
-        TCODConsole::flush();
-
-        exit = HandleKeys();
-        if(exit)
+        exitFlagged = engine.update();
+        if(exitFlagged)
             break;
+
+        engine.render();
+        TCODConsole::flush();
     }
 
     return 0;
-}
-
-bool HandleKeys(){
-    TCOD_key_t key = TCODConsole::waitForKeypress(true);
-
-    if(key.vk == TCODK_DOWN && playery < SCREEN_HEIGHT - 1)
-        playery += 1;
-    else if(key.vk == TCODK_UP && playery > 0)
-        playery -= 1;
-    else if(key.vk == TCODK_RIGHT && playerx < SCREEN_WIDTH - 1)
-        playerx += 1;
-    else if(key.vk == TCODK_LEFT && playerx > 0)
-        playerx -= 1;
-    else if(key.vk == TCODK_ENTER && key.lalt)
-        TCODConsole::setFullscreen(!TCODConsole::isFullscreen());
-    else if(key.vk == TCODK_ESCAPE)
-        return true;
-
-    return false;
 }
