@@ -1,13 +1,25 @@
 #include "libtcod.hpp"
 #include "Map.h"
+#include "Actor.h"
+#include "Engine.h"
+#include "BspListener.h"
+
+static const int ROOM_MAX_SIZE = 12;
+static const int ROOM_MIN_SIZE = 6;
 
 Map::Map(int width, int height)
     : width(width), height(height)
 {
+    bool isTransparent = false;
+    bool isWalkable = false;
+
     map = new TCODMap::TCODMap (width, height);
-    map->clear(true, true);
-    setWall(30, 22);
-    setWall(50, 22);
+    map->clear(isTransparent, isWalkable);
+
+    TCODBsp::TCODBsp bsp(0, 0, width, height);
+    bsp.splitRecursive(NULL, 8, ROOM_MAX_SIZE, ROOM_MAX_SIZE, 1.5f, 1.5f);
+    BspListener::BspListener listener(* this, ROOM_MIN_SIZE);
+    bsp.traverseInvertedLevelOrder(&listener, NULL);
 }
 
 Map::~Map()
@@ -24,9 +36,52 @@ bool Map::isWall(int x, int y) const
     return !map->isWalkable(x, y);
 }
 
-void Map::setWall(int x, int y)
+void Map::dig(int x1, int y1, int x2, int y2)
 {
-    map->setProperties(x, y, true, false);
+    if(x2 < x1)
+    {
+        int tmp = x2;
+        x2 = x1;
+        x1 = tmp;
+    }
+
+    if(y2 < y1)
+    {
+        int tmp = y2;
+        y2 = y1;
+        y1 = tmp;
+    }
+
+    for(int x = x1; x <= x2; x++)
+    {
+        for(int y = y1; y <= y2; y++)
+        {
+            bool isTransparent = true;
+            bool isWalkable = true;
+
+            map->setProperties(x, y, isTransparent, isWalkable);
+        }
+    }
+}
+
+void Map::createRoom(bool first, int x1, int y1, int x2, int y2)
+{
+    dig(x1, y1, x2, y2);
+
+    if(first)
+    {
+        engine.player->x = (x1 + x2)/2;
+        engine.player->y = (y1 + y2)/2;
+    }
+    else
+    {
+        TCODRandom * rng = TCODRandom::getInstance();
+
+        if(rng->getInt(0, 3) == 0)
+        {
+            engine.actors.push(new Actor((x1 + x2)/2, (y1 + y2)/2, '@', TCODColor::yellow));
+        }
+    }
 }
 
 void Map::render() const

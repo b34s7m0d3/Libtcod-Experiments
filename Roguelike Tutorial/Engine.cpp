@@ -11,8 +11,7 @@ Engine::Engine()
     TCODConsole::initRoot(SCREEN_WIDTH, SCREEN_HEIGHT, "libtcod C++ tutorial", false);
     player = new Actor(SCREEN_WIDTH/2, SCREEN_HEIGHT/2, '@', TCODColor::white);
     actors.push(player);
-    actors.push(new Actor(60, 13, '@', TCODColor::yellow));
-    map = new Map(SCREEN_WIDTH, SCREEN_HEIGHT-5);
+    map = new Map(SCREEN_WIDTH, SCREEN_HEIGHT - 5);
 }
 
 Engine::~Engine()

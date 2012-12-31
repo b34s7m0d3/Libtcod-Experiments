@@ -276,17 +276,29 @@
 
 1355607251 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\actor.h
 
-1356277216 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\map.cpp
+1356924446 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\map.cpp
 	"libtcod.hpp"
 	"Map.h"
+	"Actor.h"
+	"Engine.h"
+	"BspListener.h"
 
-1356277470 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\map.h
+1356923047 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\map.h
 
-1356276046 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\engine.cpp
+1356917445 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\engine.cpp
 	"libtcod.hpp"
 	"Actor.h"
 	"Map.h"
 	"Engine.h"
 
 1356276016 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\engine.h
+
+1356924532 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\bsplistener.cpp
+	"libtcod.hpp"
+	"BspListener.h"
+	"Map.h"
+
+1356925357 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\bsplistener.h
+	"libtcod.hpp"
+	"Map.h"
 

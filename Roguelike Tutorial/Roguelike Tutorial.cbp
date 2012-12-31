@@ -39,6 +39,8 @@
 		</Compiler>
 		<Unit filename="Actor.cpp" />
 		<Unit filename="Actor.h" />
+		<Unit filename="BspListener.cpp" />
+		<Unit filename="BspListener.h" />
 		<Unit filename="Engine.cpp" />
 		<Unit filename="Engine.h" />
 		<Unit filename="Map.cpp" />
