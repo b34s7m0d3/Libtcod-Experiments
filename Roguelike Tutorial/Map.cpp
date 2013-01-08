@@ -16,10 +16,7 @@ Map::Map(int width, int height)
     map = new TCODMap::TCODMap (width, height);
     map->clear(isTransparent, isWalkable);
 
-    TCODBsp::TCODBsp bsp(0, 0, width, height);
-    bsp.splitRecursive(NULL, 8, ROOM_MAX_SIZE, ROOM_MAX_SIZE, 1.5f, 1.5f);
-    BspListener::BspListener listener(* this, ROOM_MIN_SIZE);
-    bsp.traverseInvertedLevelOrder(&listener, NULL);
+    buildBSPTree();
 }
 
 Map::~Map()
@@ -97,4 +94,19 @@ void Map::render() const
             TCODConsole::root->setCharBackground(x, y, color);
         }
     }
+}
+
+void Map::buildBSPTree()
+{
+    // create root node of BSP tree, this node represents the position and size of dungeon
+    TCODBsp::TCODBsp bsp(0, 0, width, height);
+
+    // splitRecursive(TCODRandom *randomizer, int numOfRecursionLvls, int minNodeHeight, int minNodeWidth, float maxNodeH/WRatio, float maxNodeW/HRatio)
+    bsp.splitRecursive(NULL, 8, ROOM_MAX_SIZE, ROOM_MAX_SIZE, 1.5f, 1.5f);
+
+    // Define ITCODBspCallback's virtual method: bool visitNode(TCODBsp *node, void *userData)
+    BspListener::BspListener listener(* this, ROOM_MIN_SIZE);
+
+    // Call BspListener's visitNode() for each node in BSP tree, starting with last most level of nodes created
+    bsp.traverseInvertedLevelOrder(&listener, NULL);
 }

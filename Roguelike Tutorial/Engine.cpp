@@ -63,13 +63,13 @@ bool Engine::update()
 
 void Engine::render()
 {
-    TCODConsole::root->clear();
+    TCODConsole::root->clear(); // root is a static pointer member of TCODConsole
 
     // draw the map
     map->render();
 
     // draw the actors
-    for(Actor **iterator=actors.begin(); iterator != actors.end(); iterator++)
+    for(Actor **iterator=actors.begin(); iterator != actors.end(); iterator++) // **iterator is a pointer to a pointer?
     {
         (*iterator)->render();
     }
