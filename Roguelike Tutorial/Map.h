@@ -14,11 +14,13 @@ class Map
         Map(int width, int height);
         ~Map();
 
-        bool isInFov(int x, int y) const;
+        bool canWalk(int x, int y) const; // the const keyword here means that the function does not modify the content of the Map object
         bool isExplored(int x, int y) const;
-        bool isWall(int x, int y) const; // the const keyword here means that the function does not modify the content of the Map object
+        bool isInFov(int x, int y) const;
+        bool isWall(int x, int y) const;
+        void addMonster(int x, int y);
         void computeFov();
-        void render() const; // the const keyword here means that the function does not modify the content of the Map object
+        void render() const;
 
         // These methods were changed to public when we moved BspListener declaration from Map.cpp into its own class files
         void dig(int x1, int y1, int x2, int y2);

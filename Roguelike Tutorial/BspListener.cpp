@@ -1,6 +1,4 @@
-#include "libtcod.hpp"
-#include "BspListener.h"
-#include "Map.h"
+#include "main.h"
 
 BspListener::BspListener(Map &map, int minRoomSize)
     : map(map), minRoomSize(minRoomSize), roomNum(0)

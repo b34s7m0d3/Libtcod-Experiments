@@ -1,17 +1,14 @@
-#include "libtcod.hpp"
-#include "Actor.h"
-#include "Map.h"
-#include "Engine.h"
+#include "main.h"
 
-int SCREEN_WIDTH = 80;
-int SCREEN_HEIGHT = 50;
-
-Engine::Engine() : fovRadius(10), computeFov(true)
+Engine::Engine(int screenWidth, int screenHeight) : gameStatus(STARTUP), fovRadius(10), screenWidth(screenWidth), screenHeight(screenHeight)
 {
-    TCODConsole::initRoot(SCREEN_WIDTH, SCREEN_HEIGHT, "libtcod C++ tutorial", false);
-    player = new Actor(SCREEN_WIDTH/2, SCREEN_HEIGHT/2, '@', TCODColor::white);
-    actors.push(player);
-    map = new Map(SCREEN_WIDTH, SCREEN_HEIGHT - 5);
+    TCODConsole::initRoot(screenWidth, screenHeight, "libtcod C++ tutorial", false);
+    player = new Actor(screenWidth/2, screenHeight/2, '@', TCODColor::white, "player");
+    player->destructible = new PlayerDestructible(30, 2, true, "your cadaver");
+    player->attacker = new Attacker(5);
+    player->ai = new PlayerAi();
+    //actors.push(player);
+    map = new Map(screenWidth, screenHeight - 5);
 }
 
 Engine::~Engine()
@@ -22,53 +19,26 @@ Engine::~Engine()
 
 bool Engine::update()
 {
-    bool escapePressed = false;
+    if(gameStatus == STARTUP) map->computeFov();
+    gameStatus = IDLE;
 
-    TCOD_key_t key;
-    TCODSystem::checkForEvent(TCOD_EVENT_KEY_PRESS, &key, NULL);
-    switch(key.vk)
+    TCODSystem::checkForEvent(TCOD_EVENT_KEY_PRESS, &lastKey, NULL);
+    player->update();
+
+    if(gameStatus == NEW_TURN)
     {
-        case TCODK_UP :
-            if(!map->isWall(player->x, player->y-1))
+        for(Actor **iterator = actors.begin(); iterator != actors.end(); iterator++)
+        {
+            // why do we have to have *actor?
+            Actor *actor = *iterator;
+            if(actor != player)
             {
-                player->y--;
-                computeFov = true;
+                actor->update();
             }
-            break;
-        case TCODK_DOWN :
-            if(!map->isWall(player->x, player->y+1))
-            {
-                player->y++;
-                computeFov = true;
-            }
-            break;
-        case TCODK_LEFT :
-            if(!map->isWall(player->x-1, player->y))
-            {
-                player->x--;
-                computeFov = true;
-            }
-            break;
-        case TCODK_RIGHT :
-            if(!map->isWall(player->x+1, player->y))
-            {
-                player->x++;
-                computeFov = true;
-            }
-            break;
-        case TCODK_ESCAPE :
-            escapePressed = true;
-            break;
-        default: break;
+        }
     }
 
-    if(computeFov)
-    {
-        map->computeFov();
-        computeFov = false;
-    }
-
-    return escapePressed;
+    return lastKey.vk == TCODK_ESCAPE;
 }
 
 void Engine::render()
@@ -87,4 +57,14 @@ void Engine::render()
             actor->render();
         }
     }
+
+    player->render();
+	// show the player's stats
+	TCODConsole::root->print(1, screenHeight-2, "HP : %d/%d", (int)player->destructible->hp, (int)player->destructible->maxHp);
+}
+
+void Engine::sendToBack(Actor *actor)
+{
+    actors.remove(actor);
+    actors.insertBefore(actor,0);
 }

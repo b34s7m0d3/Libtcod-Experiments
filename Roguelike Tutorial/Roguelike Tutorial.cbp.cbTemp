@@ -39,20 +39,13 @@
 		</Compiler>
 		<Unit filename="Actor.cpp" />
 		<Unit filename="Actor.h" />
-		<Unit filename="Ai.cpp" />
-		<Unit filename="Ai.h" />
-		<Unit filename="Attacker.cpp" />
-		<Unit filename="Attacker.h" />
 		<Unit filename="BspListener.cpp" />
 		<Unit filename="BspListener.h" />
-		<Unit filename="Destructible.cpp" />
-		<Unit filename="Destructible.h" />
 		<Unit filename="Engine.cpp" />
 		<Unit filename="Engine.h" />
 		<Unit filename="Map.cpp" />
 		<Unit filename="Map.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="main.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />
