@@ -11,7 +11,9 @@ class Engine
         int fovRadius;
         int screenWidth;
         int screenHeight;
+        Gui *gui;
         TCOD_key_t lastKey;
+        TCOD_mouse_t mouse;
 
         Engine(int screenWidth, int screenHeight);
         ~Engine();
@@ -20,7 +22,6 @@ class Engine
         void sendToBack(Actor *actor);
 
         private:
-            //bool computeFov;
 };
 
 extern Engine engine;

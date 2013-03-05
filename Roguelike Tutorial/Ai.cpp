@@ -17,7 +17,6 @@ void PlayerAi::update(Actor *owner)
         case TCODK_DOWN : dy = 1; break;
         case TCODK_LEFT : dx = -1; break;
         case TCODK_RIGHT : dx = 1; break;
-        //case TCODK_ESCAPE : escapePressed = true; break;
         default: break;
     }
 
@@ -51,7 +50,7 @@ bool PlayerAi::moveOrAttack(Actor *owner, int targetx, int targety)
         Actor *actor = *iterator;
         if(actor->destructible && actor->destructible->isDead() && actor->x == targetx && actor->y == targety)
         {
-            printf("There's a %s here\n",actor->name);
+            engine.gui->message(TCODColor::lightGrey, "There's a %s here", actor->name);
         }
     }
 

@@ -8,13 +8,17 @@ Engine::Engine(int screenWidth, int screenHeight) : gameStatus(STARTUP), fovRadi
     player->attacker = new Attacker(5);
     player->ai = new PlayerAi();
     //actors.push(player);
-    map = new Map(screenWidth, screenHeight - 5);
+    map = new Map(screenWidth, screenHeight - 7);
+    gui = new Gui();
+
+    gui->message(TCODColor::red, "Welcome stranger!\nPrepare to perish in the Tombs of the Ancient Kings.");
 }
 
 Engine::~Engine()
 {
     actors.clearAndDelete();
     delete map;
+    delete gui;
 }
 
 bool Engine::update()
@@ -22,7 +26,7 @@ bool Engine::update()
     if(gameStatus == STARTUP) map->computeFov();
     gameStatus = IDLE;
 
-    TCODSystem::checkForEvent(TCOD_EVENT_KEY_PRESS, &lastKey, NULL);
+    TCODSystem::checkForEvent(TCOD_EVENT_KEY_PRESS | TCOD_EVENT_MOUSE, &lastKey, &mouse);
     player->update();
 
     if(gameStatus == NEW_TURN)
@@ -59,6 +63,8 @@ void Engine::render()
     }
 
     player->render();
+    gui->render();
+
 	// show the player's stats
 	TCODConsole::root->print(1, screenHeight-2, "HP : %d/%d", (int)player->destructible->hp, (int)player->destructible->maxHp);
 }

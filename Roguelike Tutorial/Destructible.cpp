@@ -47,11 +47,10 @@ void Destructible::die(Actor *owner)
 
 void MonsterDestructible::die(Actor *owner)
 {
-    // transform it into a nasty corpse! it doesn't block, can't be
-    // attacked and doesn't move
+    // transform it into a corpse! it doesn't block, can't be attacked, and doesn't move.
     if(!owner->destructible->isImmortal)
     {
-        printf ("%s is dead\n",owner->name);
+        engine.gui->message(TCODColor::lightGrey, "%s is dead", owner->name);
         Destructible::die(owner);
     }
 }
@@ -60,7 +59,7 @@ void PlayerDestructible::die(Actor *owner)
 {
     if(!owner->destructible->isImmortal)
     {
-        printf ("You died!\n");
+        engine.gui->message(TCODColor::red, "You died!");
         Destructible::die(owner);
         engine.gameStatus=Engine::DEFEAT;
     }

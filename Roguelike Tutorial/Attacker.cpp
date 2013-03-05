@@ -12,17 +12,18 @@ void Attacker::attack(Actor *owner, Actor *target)
         float damage = power - target->destructible->defense;
         if(damage > 0)
         {
-            printf("%s attacks %s for %g hit points.\n", owner->name, target->name, damage);
+            TCODColor textColor = owner == engine.player ? TCODColor::red : TCODColor::lightGrey;
+            engine.gui->message(textColor, "%s attacks %s for %g hit points.", owner->name, target->name, power - target->destructible->defense);
         }
         else
         {
-            printf("%s attacks %s but it has no effect!\n", owner->name, target->name);
+            engine.gui->message(TCODColor::lightGrey, "%s attacks %s but it has no effect!", owner->name, target->name);
         }
 
         target->destructible->takeDamage(target, power);
     }
     else
     {
-        printf("%s attacks %s in vain.\n", owner->name, target->name);
+        engine.gui->message(TCODColor::lightGrey, "%s attacks %s in vain.", owner->name, target->name);
     }
 }
