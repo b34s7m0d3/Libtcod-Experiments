@@ -323,3 +323,206 @@
 	"main.h"
 	"stdarg.h"
 
+1362605545 source:c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\actor.cpp
+	"main.h"
+
+1362605546 c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\main.h
+	<stdio.h>
+	"libtcod.hpp"
+	"Gui.h"
+	"Attacker.h"
+	"Destructible.h"
+	"Ai.h"
+	"Actor.h"
+	"Map.h"
+	"Engine.h"
+	"BspListener.h"
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\libtcod.hpp
+	"libtcod.h"
+	"list.hpp"
+	"color.hpp"
+	"console.hpp"
+	"image.hpp"
+	"sys.hpp"
+	"mersenne.hpp"
+	"mouse.hpp"
+	"bresenham.hpp"
+	"noise.hpp"
+	"fov.hpp"
+	"path.hpp"
+	"lex.hpp"
+	"parser.hpp"
+	"tree.hpp"
+	"bsp.hpp"
+	"heightmap.hpp"
+	"zip.hpp"
+	"namegen.hpp"
+	"txtfield.hpp"
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\libtcod.h
+	<wchar.h>
+	"SDL/SDL.h"
+	"list.h"
+	"color.h"
+	"console.h"
+	"image.h"
+	"mouse.h"
+	"sys.h"
+	"mersenne.h"
+	"bresenham.h"
+	"noise.h"
+	"fov.h"
+	"path.h"
+	"lex.h"
+	"parser.h"
+	"tree.h"
+	"bsp.h"
+	"heightmap.h"
+	"zip.h"
+	"namegen.h"
+	"txtfield.h"
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\list.h
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\color.h
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\console.h
+	"console_types.h"
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\console_types.h
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\image.h
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\mouse.h
+	"mouse_types.h"
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\mouse_types.h
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\sys.h
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\mersenne.h
+	"mersenne_types.h"
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\mersenne_types.h
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\bresenham.h
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\noise.h
+	"noise_defaults.h"
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\noise_defaults.h
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\fov.h
+	"fov_types.h"
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\fov_types.h
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\path.h
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\lex.h
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\parser.h
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\tree.h
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\bsp.h
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\heightmap.h
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\zip.h
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\namegen.h
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\txtfield.h
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\list.hpp
+	<string.h>
+	<stdlib.h>
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\color.hpp
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\console.hpp
+	"console_types.h"
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\image.hpp
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\sys.hpp
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\mersenne.hpp
+	"mersenne_types.h"
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\mouse.hpp
+	"mouse_types.h"
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\bresenham.hpp
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\noise.hpp
+	"noise_defaults.h"
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\fov.hpp
+	"fov_types.h"
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\path.hpp
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\lex.hpp
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\parser.hpp
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\tree.hpp
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\bsp.hpp
+
+1362605549 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\heightmap.hpp
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\zip.hpp
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\namegen.hpp
+
+1362605550 c:\users\jcampb13\desktop\libtcod tutorial\libtcod-1.5.1\include\txtfield.hpp
+	"color.hpp"
+
+1362605545 c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\gui.h
+
+1362605545 c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\attacker.h
+
+1362605545 c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\destructible.h
+
+1362605545 c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\ai.h
+
+1362605545 c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\actor.h
+
+1362606039 c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\map.h
+
+1362605545 c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\engine.h
+
+1362605545 c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\bsplistener.h
+	"libtcod.hpp"
+	"Map.h"
+
+1362605545 source:c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\ai.cpp
+	"main.h"
+	<math.h>
+
+1362605545 source:c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\attacker.cpp
+	"main.h"
+
+1362605545 source:c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\bsplistener.cpp
+	"main.h"
+
+1362605545 source:c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\destructible.cpp
+	"main.h"
+
+1362605545 source:c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\engine.cpp
+	"main.h"
+
+1362605545 source:c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\gui.cpp
+	"main.h"
+	"stdarg.h"
+
+1362605546 source:c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\main.cpp
+	"main.h"
+
+1362606039 source:c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\map.cpp
+	"main.h"
+
