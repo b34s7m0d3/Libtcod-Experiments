@@ -12,8 +12,11 @@ class Actor
         Attacker *attacker;
         Destructible *destructible;
         Ai *ai;
+        Pickable *pickable;
+        Container *container;
 
         Actor(int x, int y, int ch, const TCODColor &col, const char *name);
+        ~Actor();
         void render() const; // the const keyword here means that the function does not modify the content of the Actor object
         void update();
 };

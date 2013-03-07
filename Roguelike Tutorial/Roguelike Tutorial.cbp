@@ -45,14 +45,20 @@
 		<Unit filename="Attacker.h" />
 		<Unit filename="BspListener.cpp" />
 		<Unit filename="BspListener.h" />
+		<Unit filename="Container.cpp" />
+		<Unit filename="Container.h" />
 		<Unit filename="Destructible.cpp" />
 		<Unit filename="Destructible.h" />
 		<Unit filename="Engine.cpp" />
 		<Unit filename="Engine.h" />
 		<Unit filename="Gui.cpp" />
 		<Unit filename="Gui.h" />
+		<Unit filename="Healer.cpp" />
+		<Unit filename="Healer.h" />
 		<Unit filename="Map.cpp" />
 		<Unit filename="Map.h" />
+		<Unit filename="Pickable.cpp" />
+		<Unit filename="Pickable.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="main.h" />
 		<Extensions>
