@@ -267,15 +267,15 @@
 1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\txtfield.hpp
 	"color.hpp"
 
-1362542104 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\actor.cpp
+1362541035 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\actor.cpp
 	"main.h"
 
 1362541014 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\actor.h
 
-1362839061 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\map.cpp
+1362517810 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\map.cpp
 	"main.h"
 
-1362838327 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\map.h
+1361139494 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\map.h
 
 1362531222 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\engine.cpp
 	"main.h"
@@ -306,7 +306,7 @@
 
 1362542204 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\destructible.h
 
-1362542380 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\destructible.cpp
+1362517810 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\destructible.cpp
 	"main.h"
 
 1360462233 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\attacker.h
@@ -314,7 +314,7 @@
 1362517810 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\attacker.cpp
 	"main.h"
 
-1362854604 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\ai.h
+1361141424 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\ai.h
 
 1362517810 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\ai.cpp
 	"main.h"
@@ -326,6 +326,7 @@
 	"main.h"
 	"stdarg.h"
 
+<<<<<<< HEAD
 1362531408 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\container.h
 
 1362531474 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\container.cpp
@@ -337,7 +338,7 @@
 	"main.h"
 
 1362541378 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\healer.h
-
+=======
 1362605545 source:c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\actor.cpp
 	"main.h"
 
@@ -540,7 +541,5 @@
 
 1362606039 source:c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\map.cpp
 	"main.h"
-
-1362542464 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\healer.cpp
-	"main.h"
+>>>>>>> 19a483c63549017ecefb94147033410bc907a3b8
 

@@ -8,7 +8,7 @@ bool Healer::use(Actor *owner, Actor *wearer)
 {
     if(wearer->destructible)
     {
-        float amountHealed = wearer->destructible->heal(amount); // TODO: Implement heal() in destructible
+        float amountHealed = wearer->destructible->heal(amount);
 
         if(amountHealed > 0)
         {

@@ -5,6 +5,7 @@
 static const int ROOM_MAX_SIZE = 12;
 static const int ROOM_MIN_SIZE = 6;
 static const int MAX_ROOM_MONSTERS = 3;
+static const int MAX_ROOM_ITEMS = 2;
 
 Map::Map(int width, int height)
     : width(width), height(height)
@@ -98,6 +99,15 @@ void Map::addMonster(int x, int y)
     }
 }
 
+void Map::addItem(int x, int y)
+{
+    Actor *healthPotion = new Actor::Actor(x, y, '!', TCODColor::violet, "health potion");
+    healthPotion->blocks = false;
+    healthPotion->pickable = new Healer(4);
+
+    engine.actors.push(healthPotion);
+}
+
 void Map::buildBSPTree()
 {
     // create root node of BSP tree, this node represents the position and size of dungeon
@@ -142,6 +152,20 @@ void Map::createRoom(bool first, int x1, int y1, int x2, int y2)
             }
 
             nbMonsters--;
+        }
+
+        int nbItems = rng->getInt(0, MAX_ROOM_ITEMS);
+        while(nbItems > 0)
+        {
+            int x = rng->getInt(x1, x2);
+            int y = rng->getInt(y1, y2);
+
+            if (canWalk(x, y))
+            {
+                addItem(x, y);
+            }
+
+            nbItems--;
         }
     }
 }
