@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1360629904 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\main.cpp
+1364516978 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\main.cpp
 	"main.h"
 
 1346201279 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.0\include\libtcod.hpp
@@ -123,7 +123,7 @@
 
 1346201279 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.0\include\namegen.hpp
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\libtcod.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\libtcod.hpp
 	"libtcod.h"
 	"list.hpp"
 	"color.hpp"
@@ -145,7 +145,7 @@
 	"namegen.hpp"
 	"txtfield.hpp"
 
-1354404853 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\libtcod.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\libtcod.h
 	<wchar.h>
 	"SDL/SDL.h"
 	"list.h"
@@ -168,128 +168,128 @@
 	"namegen.h"
 	"txtfield.h"
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\list.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\list.h
 
-1354404852 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\color.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\color.h
 
-1354404852 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\console.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\console.h
 	"console_types.h"
 
-1354404853 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\console_types.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\console_types.h
 
-1354404853 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\image.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\image.h
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\mouse.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\mouse.h
 	"mouse_types.h"
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\mouse_types.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\mouse_types.h
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\sys.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\sys.h
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\mersenne.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\mersenne.h
 	"mersenne_types.h"
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\mersenne_types.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\mersenne_types.h
 
-1354404852 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\bresenham.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\bresenham.h
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\noise.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\noise.h
 	"noise_defaults.h"
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\noise_defaults.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\noise_defaults.h
 
-1354404853 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\fov.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\fov.h
 	"fov_types.h"
 
-1354404853 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\fov_types.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\fov_types.h
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\path.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\path.h
 
-1354404853 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\lex.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\lex.h
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\parser.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\parser.h
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\tree.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\tree.h
 
-1354404852 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\bsp.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\bsp.h
 
-1354404853 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\heightmap.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\heightmap.h
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\zip.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\zip.h
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\namegen.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\namegen.h
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\txtfield.h
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\txtfield.h
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\list.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\list.hpp
 	<string.h>
 	<stdlib.h>
 
-1354404852 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\color.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\color.hpp
 
-1354404853 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\console.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\console.hpp
 	"console_types.h"
 
-1354404853 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\image.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\image.hpp
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\sys.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\sys.hpp
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\mersenne.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\mersenne.hpp
 	"mersenne_types.h"
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\mouse.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\mouse.hpp
 	"mouse_types.h"
 
-1354404852 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\bresenham.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\bresenham.hpp
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\noise.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\noise.hpp
 	"noise_defaults.h"
 
-1354404853 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\fov.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\fov.hpp
 	"fov_types.h"
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\path.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\path.hpp
 
-1354404853 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\lex.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\lex.hpp
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\parser.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\parser.hpp
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\tree.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\tree.hpp
 
-1354404852 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\bsp.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\bsp.hpp
 
-1354404853 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\heightmap.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\heightmap.hpp
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\zip.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\zip.hpp
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\namegen.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\namegen.hpp
 
-1354404857 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\txtfield.hpp
+1364516979 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.1\include\txtfield.hpp
 	"color.hpp"
 
-1362542104 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\actor.cpp
+1364516978 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\actor.cpp
 	"main.h"
 
-1362541014 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\actor.h
+1364516978 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\actor.h
 
-1362839061 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\map.cpp
+1364517071 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\map.cpp
 	"main.h"
 
-1362838327 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\map.h
+1364517017 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\map.h
 
-1362531222 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\engine.cpp
+1364516978 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\engine.cpp
 	"main.h"
 
-1362517810 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\engine.h
+1364516978 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\engine.h
 
-1360459945 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\bsplistener.cpp
+1364516978 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\bsplistener.cpp
 	"main.h"
 
-1356925357 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\bsplistener.h
+1364516978 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\bsplistener.h
 	"libtcod.hpp"
 	"Map.h"
 
-1362541286 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\main.h
+1364516978 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\main.h
 	<stdio.h>
 	"libtcod.hpp"
 	"Gui.h"
@@ -304,39 +304,39 @@
 	"Engine.h"
 	"BspListener.h"
 
-1362542204 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\destructible.h
+1364516978 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\destructible.h
 
-1362542380 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\destructible.cpp
+1364516978 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\destructible.cpp
 	"main.h"
 
-1360462233 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\attacker.h
+1364516978 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\attacker.h
 
-1362517810 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\attacker.cpp
+1364516978 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\attacker.cpp
 	"main.h"
 
-1362854604 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\ai.h
+1364516978 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\ai.h
 
-1362517810 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\ai.cpp
+1364517032 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\ai.cpp
 	"main.h"
 	<math.h>
 
-1362517810 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\gui.h
+1364516978 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\gui.h
 
-1362517810 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\gui.cpp
+1364516978 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\gui.cpp
 	"main.h"
 	"stdarg.h"
 
-1362531408 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\container.h
+1364516978 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\container.h
 
-1362531474 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\container.cpp
+1364516978 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\container.cpp
 	"main.h"
 
-1362532955 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\pickable.h
+1364516978 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\pickable.h
 
-1362534020 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\pickable.cpp
+1364516978 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\pickable.cpp
 	"main.h"
 
-1362541378 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\healer.h
+1364516978 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\healer.h
 
 1362605545 source:c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\actor.cpp
 	"main.h"
@@ -541,6 +541,150 @@
 1362606039 source:c:\users\jcampb13\desktop\libtcod tutorial\roguelike tutorial\map.cpp
 	"main.h"
 
-1362542464 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\healer.cpp
+1364516978 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\healer.cpp
 	"main.h"
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\libtcod.hpp
+	"libtcod.h"
+	"list.hpp"
+	"color.hpp"
+	"console.hpp"
+	"image.hpp"
+	"sys.hpp"
+	"mersenne.hpp"
+	"mouse.hpp"
+	"bresenham.hpp"
+	"noise.hpp"
+	"fov.hpp"
+	"path.hpp"
+	"lex.hpp"
+	"parser.hpp"
+	"tree.hpp"
+	"bsp.hpp"
+	"heightmap.hpp"
+	"zip.hpp"
+	"namegen.hpp"
+	"txtfield.hpp"
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\libtcod.h
+	<wchar.h>
+	"SDL/SDL.h"
+	"list.h"
+	"color.h"
+	"console.h"
+	"image.h"
+	"mouse.h"
+	"sys.h"
+	"mersenne.h"
+	"bresenham.h"
+	"noise.h"
+	"fov.h"
+	"path.h"
+	"lex.h"
+	"parser.h"
+	"tree.h"
+	"bsp.h"
+	"heightmap.h"
+	"zip.h"
+	"namegen.h"
+	"txtfield.h"
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\list.h
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\color.h
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\console.h
+	"console_types.h"
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\console_types.h
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\image.h
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\mouse.h
+	"mouse_types.h"
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\mouse_types.h
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\sys.h
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\mersenne.h
+	"mersenne_types.h"
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\mersenne_types.h
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\bresenham.h
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\noise.h
+	"noise_defaults.h"
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\noise_defaults.h
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\fov.h
+	"fov_types.h"
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\fov_types.h
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\path.h
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\lex.h
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\parser.h
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\tree.h
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\bsp.h
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\heightmap.h
+
+1364514851 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\zip.h
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\namegen.h
+
+1364514851 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\txtfield.h
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\list.hpp
+	<string.h>
+	<stdlib.h>
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\color.hpp
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\console.hpp
+	"console_types.h"
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\image.hpp
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\sys.hpp
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\mersenne.hpp
+	"mersenne_types.h"
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\mouse.hpp
+	"mouse_types.h"
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\bresenham.hpp
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\noise.hpp
+	"noise_defaults.h"
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\fov.hpp
+	"fov_types.h"
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\path.hpp
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\lex.hpp
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\parser.hpp
+
+1364514851 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\tree.hpp
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\bsp.hpp
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\heightmap.hpp
+
+1364514851 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\zip.hpp
+
+1364514850 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\namegen.hpp
+
+1364514851 c:\users\campbeja\documents\my projects\libtcod\libtcod-1.5.2-gcc47\include\txtfield.hpp
+	"color.hpp"
 

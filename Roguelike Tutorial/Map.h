@@ -29,7 +29,7 @@ class Map
 
     protected:
         Tile *tiles;
-        TCODMap::TCODMap * map;
+        TCODMap * map;
         friend class BspListener;
 
     private:

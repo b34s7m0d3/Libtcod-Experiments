@@ -114,7 +114,7 @@ Actor *PlayerAi::choseFromInventory(Actor *owner)
     static TCODConsole con(INVENTORY_WIDTH, INVENTORY_HEIGHT);
 
     // display the inventory frame
-    con.setDefaultForeground(TCODColor::TCODColor(200,180,50));
+    con.setDefaultForeground(TCODColor(200,180,50));
     con.printFrame(0, 0, INVENTORY_WIDTH, INVENTORY_HEIGHT, true, TCOD_BKGND_DEFAULT, "inventory");
 
     // display the items with their keyboard shortcut

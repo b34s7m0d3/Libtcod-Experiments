@@ -13,7 +13,7 @@ Map::Map(int width, int height)
     bool isTransparent = false;
     bool isWalkable = false;
 
-    map = new TCODMap::TCODMap (width, height);
+    map = new TCODMap (width, height);
     map->clear(isTransparent, isWalkable);
 
     tiles = new Tile[width * height];
@@ -101,7 +101,7 @@ void Map::addMonster(int x, int y)
 
 void Map::addItem(int x, int y)
 {
-    Actor *healthPotion = new Actor::Actor(x, y, '!', TCODColor::violet, "health potion");
+    Actor *healthPotion = new Actor(x, y, '!', TCODColor::violet, "health potion");
     healthPotion->blocks = false;
     healthPotion->pickable = new Healer(4);
 
@@ -111,13 +111,13 @@ void Map::addItem(int x, int y)
 void Map::buildBSPTree()
 {
     // create root node of BSP tree, this node represents the position and size of dungeon
-    TCODBsp::TCODBsp bsp(0, 0, width, height);
+    TCODBsp bsp(0, 0, width, height);
 
     // splitRecursive(TCODRandom *randomizer, int numOfRecursionLvls, int minNodeHeight, int minNodeWidth, float maxNodeH/WRatio, float maxNodeW/HRatio)
     bsp.splitRecursive(NULL, 8, ROOM_MAX_SIZE, ROOM_MAX_SIZE, 1.5f, 1.5f);
 
     // Define ITCODBspCallback's virtual method: bool visitNode(TCODBsp *node, void *userData)
-    BspListener::BspListener listener(* this, ROOM_MIN_SIZE);
+    BspListener listener(* this, ROOM_MIN_SIZE);
 
     // Call BspListener's visitNode() for each node in BSP tree, starting with last most level of nodes created
     bsp.traverseInvertedLevelOrder(&listener, NULL);
