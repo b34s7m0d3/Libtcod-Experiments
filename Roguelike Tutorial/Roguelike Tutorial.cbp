@@ -57,6 +57,8 @@
 		<Unit filename="Gui.h" />
 		<Unit filename="Healer.cpp" />
 		<Unit filename="Healer.h" />
+		<Unit filename="LightningBolt.cpp" />
+		<Unit filename="LightningBolt.h" />
 		<Unit filename="Map.cpp" />
 		<Unit filename="Map.h" />
 		<Unit filename="Pickable.cpp" />

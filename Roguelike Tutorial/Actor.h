@@ -19,6 +19,7 @@ class Actor
         ~Actor();
         void render() const; // the const keyword here means that the function does not modify the content of the Actor object
         void update();
+        float getDistance(int cx, int cy) const;
 };
 
 #endif // ACTOR_H

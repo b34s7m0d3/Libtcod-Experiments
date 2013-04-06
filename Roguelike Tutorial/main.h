@@ -10,6 +10,7 @@ class Gui;
 #include "Pickable.h"
 #include "Container.h"
 #include "Healer.h"
+#include "LightningBolt.h"
 #include "Actor.h"
 #include "Map.h"
 #include "Engine.h"

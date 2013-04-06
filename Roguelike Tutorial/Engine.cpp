@@ -75,3 +75,26 @@ void Engine::sendToBack(Actor *actor)
     actors.remove(actor);
     actors.insertBefore(actor,0);
 }
+
+Actor *Engine::getClosestMonster(int x, int y, float range) const
+{
+    Actor *closestMonster = NULL;
+    float closestDistance = -1;
+
+    for(Actor **iterator = actors.begin(); iterator != actors.end(); iterator++)
+    {
+        Actor *actor = *iterator;
+
+        if(actor->destructible && !actor->destructible->isDead())
+        {
+            float distance = actor->getDistance(x, y);
+            if((closestDistance < 0 || closestDistance > distance) && (distance <= range || range == 0.0f))
+            {
+                closestMonster = actor;
+                closestDistance = distance;
+            }
+        }
+    }
+
+    return closestMonster;
+}

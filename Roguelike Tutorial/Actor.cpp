@@ -1,4 +1,5 @@
 #include "main.h"
+#include <math.h>
 
 Actor::Actor(int x, int y, int ch, const TCODColor &col, const char *name)
     : x(x), y(y), ch(ch), col(col), name(name), blocks(true), attacker(NULL), destructible(NULL), ai(NULL), pickable(NULL), container(NULL)
@@ -24,4 +25,12 @@ void Actor::render() const
 void Actor::update()
 {
     if(ai) ai->update(this);
+}
+
+float Actor::getDistance(int cx, int cy) const
+{
+    int dx = x - cx;
+    int dy = y - cy;
+
+    return sqrt((dx * dx) + (dy * dy));
 }

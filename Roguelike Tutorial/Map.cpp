@@ -101,11 +101,25 @@ void Map::addMonster(int x, int y)
 
 void Map::addItem(int x, int y)
 {
-    Actor *healthPotion = new Actor(x, y, '!', TCODColor::violet, "health potion");
-    healthPotion->blocks = false;
-    healthPotion->pickable = new Healer(4);
+    TCODRandom *rng = TCODRandom::getInstance();
+    int dice = rng->getInt(0,100);
 
-    engine.actors.push(healthPotion);
+    if(dice < 70)
+    {
+        Actor *healthPotion = new Actor(x, y, '!', TCODColor::violet, "health potion");
+        healthPotion->blocks = false;
+        healthPotion->pickable = new Healer(4);
+
+        engine.actors.push(healthPotion);
+    }
+    else if(dice < 80)
+    {
+        Actor *scrollOfLightningBolt = new Actor(x, y, '#', TCODColor::lightYellow, "scroll of lightning bolt");
+        scrollOfLightningBolt->blocks = false;
+        scrollOfLightningBolt->pickable = new LightningBolt(5, 20);
+
+        engine.actors.push(scrollOfLightningBolt);
+    }
 }
 
 void Map::buildBSPTree()
