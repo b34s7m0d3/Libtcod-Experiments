@@ -11,6 +11,7 @@ class Gui;
 #include "Container.h"
 #include "Healer.h"
 #include "LightningBolt.h"
+#include "Fireball.h"
 #include "Actor.h"
 #include "Map.h"
 #include "Engine.h"

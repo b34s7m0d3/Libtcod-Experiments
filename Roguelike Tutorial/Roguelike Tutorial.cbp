@@ -53,6 +53,8 @@
 		<Unit filename="Destructible.h" />
 		<Unit filename="Engine.cpp" />
 		<Unit filename="Engine.h" />
+		<Unit filename="Fireball.cpp" />
+		<Unit filename="Fireball.h" />
 		<Unit filename="Gui.cpp" />
 		<Unit filename="Gui.h" />
 		<Unit filename="Healer.cpp" />

@@ -76,6 +76,55 @@ void Engine::sendToBack(Actor *actor)
     actors.insertBefore(actor,0);
 }
 
+bool Engine::pickATile(int *x, int *y, float maxRange)
+{
+    while (!TCODConsole::isWindowClosed())
+    {
+        render();
+
+        // Highlight available range from player
+        for(int cx = 0; cx < map->width; cx++)
+        {
+            for(int cy = 0; cy < map->height; cy++)
+            {
+                if(map->isInFov(cx, cy) && (maxRange == 0 || player->getDistance(cx, cy) <= maxRange))
+                {
+                    TCODColor col = TCODConsole::root->getCharBackground(cx, cy);
+                    col = col * 1.2f;
+
+                    TCODConsole::root->setCharBackground(cx, cy, col);
+                }
+            }
+        }
+
+        // Get mouse coordinates or pending keystroke
+        TCODSystem::checkForEvent(TCOD_EVENT_KEY_PRESS | TCOD_EVENT_MOUSE, &lastKey, &mouse);
+        if(map->isInFov(mouse.cx, mouse.cy) && (maxRange == 0 || player->getDistance(mouse.cx, mouse.cy) <= maxRange))
+        {
+            // Highlight mouse coordinates
+            TCODConsole::root->setCharBackground(mouse.cx, mouse.cy, TCODColor::white);
+
+            // Set x and y if clicked
+            if(mouse.lbutton_pressed)
+            {
+                *x = mouse.cx;
+                *y = mouse.cy;
+                return true;
+            }
+        }
+
+        // Disregard if user cancelled action by right clicking or pressing key
+        if(mouse.rbutton_pressed || lastKey.vk != TCODK_NONE)
+        {
+            return false;
+        }
+
+        TCODConsole::flush();
+    }
+
+    return false;
+}
+
 Actor *Engine::getClosestMonster(int x, int y, float range) const
 {
     Actor *closestMonster = NULL;
