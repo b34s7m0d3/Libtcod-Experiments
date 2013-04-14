@@ -120,13 +120,21 @@ void Map::addItem(int x, int y)
 
         engine.actors.push(scrollOfLightningBolt);
     }
-    else if(dice < 100)
+    else if(dice < 90)
     {
         Actor *scrollOfFireball = new Actor(x, y, '#', TCODColor::darkerFlame, "scroll of fireball");
         scrollOfFireball->blocks = false;
         scrollOfFireball->pickable = new Fireball(3, 12);
 
         engine.actors.push(scrollOfFireball);
+    }
+    else
+    {
+        Actor *scrollOfConfusion = new Actor(x, y, '?', TCODColor::cyan, "scroll of confusion");
+        scrollOfConfusion->blocks = false;
+        scrollOfConfusion->pickable = new Confuser(10, 8);
+
+        engine.actors.push(scrollOfConfusion);
     }
 }
 
