@@ -47,8 +47,6 @@
 		<Unit filename="Attacker.h" />
 		<Unit filename="BspListener.cpp" />
 		<Unit filename="BspListener.h" />
-		<Unit filename="ConfusedMonsterAi.cpp" />
-		<Unit filename="ConfusedMonsterAi.h" />
 		<Unit filename="Confuser.cpp" />
 		<Unit filename="Confuser.h" />
 		<Unit filename="Container.cpp" />

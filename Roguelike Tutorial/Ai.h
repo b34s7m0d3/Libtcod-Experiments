@@ -32,4 +32,16 @@ class MonsterAi : public Ai
         void moveOrAttack(Actor *owner, int targetx, int targety);
 };
 
+class ConfusedMonsterAi : public Ai
+{
+    public:
+        ConfusedMonsterAi(int nbTurns, Ai *oldAi, TCODColor oldColor);
+        void update(Actor *owner);
+
+    protected:
+        int nbTurns;
+        Ai *oldAi;
+        TCODColor oldColor;
+};
+
 #endif // AI_H

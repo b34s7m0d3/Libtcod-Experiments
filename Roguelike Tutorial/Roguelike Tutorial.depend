@@ -273,12 +273,12 @@
 
 1365275890 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\actor.h
 
-1365904700 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\map.cpp
+1367783306 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\map.cpp
 	"main.h"
 
 1364517017 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\map.h
 
-1365819583 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\engine.cpp
+1365967584 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\engine.cpp
 	"main.h"
 
 1365819642 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\engine.h
@@ -290,14 +290,13 @@
 	"libtcod.hpp"
 	"Map.h"
 
-1365818244 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\main.h
+1365990641 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\main.h
 	<stdio.h>
 	"libtcod.hpp"
 	"Gui.h"
 	"Attacker.h"
 	"Destructible.h"
 	"Ai.h"
-	"ConfusedMonsterAi.h"
 	"Pickable.h"
 	"Container.h"
 	"Healer.h"
@@ -319,11 +318,12 @@
 1364516978 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\attacker.cpp
 	"main.h"
 
-1364516978 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\ai.h
+1367771511 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\ai.h
 
-1364517032 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\ai.cpp
+1367783627 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\ai.cpp
 	"main.h"
 	<math.h>
+	<windows.h>
 
 1364516978 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\gui.h
 
@@ -707,9 +707,10 @@
 
 1365818758 c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\confuser.h
 
-1365904784 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\confusedmonsterai.cpp
+1365971026 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\confusedmonsterai.cpp
 	"main.h"
+	<windows.h>
 
-1365905232 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\confuser.cpp
+1367773371 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\confuser.cpp
 	"main.h"
 

@@ -20,8 +20,9 @@ bool Confuser::use(Actor *owner, Actor *wearer)
         return false;
     }
 
-    Ai *confuserAi = new ConfusedMonsterAi(nbTurns, actor->ai);
+    Ai *confuserAi = new ConfusedMonsterAi(nbTurns, actor->ai, actor->col);
     actor->ai = confuserAi;
+    actor->col = TCODColor::lightBlue;
 
     engine.gui->message(TCODColor::lightGreen, "The eyes of the %s look vacant,\nas he starts to stumble around!", actor->name);
 

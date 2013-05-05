@@ -8,7 +8,7 @@ Engine::Engine(int screenWidth, int screenHeight) : gameStatus(STARTUP), fovRadi
     player->attacker = new Attacker(5);
     player->ai = new PlayerAi();
     player->container = new Container(26);
-    //actors.push(player);
+    actors.push(player);
     map = new Map(screenWidth, screenHeight - 7);
     gui = new Gui();
 

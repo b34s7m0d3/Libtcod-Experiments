@@ -1,4 +1,5 @@
 #include "main.h"
+#include <windows.h>
 
 ConfusedMonsterAi::ConfusedMonsterAi(int nbTurns, Ai *oldAi) : nbTurns(nbTurns), oldAi(oldAi)
 {
@@ -6,6 +7,13 @@ ConfusedMonsterAi::ConfusedMonsterAi(int nbTurns, Ai *oldAi) : nbTurns(nbTurns),
 
 void ConfusedMonsterAi::update(Actor *owner)
 {
+    bool actorIsPlayer = (owner == engine.player);
+    if(actorIsPlayer)
+    {
+        engine.gameStatus = Engine::NEW_TURN;
+        Sleep(2000);
+    }
+
     TCODRandom *rng = TCODRandom::getInstance();
 
     int dx = rng->getInt(-1, 1);
@@ -33,6 +41,9 @@ void ConfusedMonsterAi::update(Actor *owner)
     nbTurns--;
     if(nbTurns == 0)
     {
+        if(actorIsPlayer)
+            engine.gui->message(TCODColor::lightGreen, "The %s regains their composure and resumes\ntheir adventure.", owner->name);
+
         owner->ai = oldAi;
         delete this;
     }

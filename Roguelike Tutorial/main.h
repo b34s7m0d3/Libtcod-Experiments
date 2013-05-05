@@ -7,7 +7,6 @@ class Gui;
 #include "Attacker.h"
 #include "Destructible.h"
 #include "Ai.h"
-#include "ConfusedMonsterAi.h"
 #include "Pickable.h"
 #include "Container.h"
 #include "Healer.h"

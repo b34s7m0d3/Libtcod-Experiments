@@ -104,7 +104,7 @@ void Map::addItem(int x, int y)
     TCODRandom *rng = TCODRandom::getInstance();
     int dice = rng->getInt(0,100);
 
-    if(dice < 70)
+    /*if(dice < 70)
     {
         Actor *healthPotion = new Actor(x, y, '!', TCODColor::violet, "health potion");
         healthPotion->blocks = false;
@@ -129,13 +129,13 @@ void Map::addItem(int x, int y)
         engine.actors.push(scrollOfFireball);
     }
     else
-    {
+    {*/
         Actor *scrollOfConfusion = new Actor(x, y, '?', TCODColor::cyan, "scroll of confusion");
         scrollOfConfusion->blocks = false;
         scrollOfConfusion->pickable = new Confuser(10, 8);
 
         engine.actors.push(scrollOfConfusion);
-    }
+    //}
 }
 
 void Map::buildBSPTree()

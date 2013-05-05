@@ -1,5 +1,6 @@
 #include "main.h"
 #include <math.h>
+#include <windows.h>
 
 static const int TRACKING_TURNS = 3;
 
@@ -205,5 +206,57 @@ void MonsterAi::moveOrAttack(Actor *owner, int targetx, int targety)
     else if(owner->attacker)
     {
         owner->attacker->attack(owner, engine.player);
+    }
+}
+
+ConfusedMonsterAi::ConfusedMonsterAi(int nbTurns, Ai *oldAi, TCODColor oldColor) : nbTurns(nbTurns), oldAi(oldAi), oldColor(oldColor)
+{
+}
+
+void ConfusedMonsterAi::update(Actor *owner)
+{
+    if(owner->destructible && owner->destructible->isDead())
+    {
+        return;
+    }
+
+    bool actorIsPlayer = (owner == engine.player);
+    if(actorIsPlayer)
+    {
+        engine.gameStatus = Engine::NEW_TURN;
+        Sleep(2000);
+    }
+
+    TCODRandom *rng = TCODRandom::getInstance();
+
+    int dx = rng->getInt(-1, 1);
+    int dy = rng->getInt(-1, 1);
+
+    if(dx != 0 || dy != 0)
+    {
+        int destX = owner->x + dx;
+        int destY = owner->y + dy;
+        if(engine.map->canWalk(destX, destY))
+        {
+            owner->x = destX;
+            owner->y = destY;
+        }
+        else
+        {
+            Actor *actor = engine.getActor(destX, destY);
+            if(actor)
+            {
+                owner->attacker->attack(owner, actor);
+            }
+        }
+    }
+
+    nbTurns--;
+    if(nbTurns == 0)
+    {
+        owner->col = oldColor;
+
+        owner->ai = oldAi;
+        delete this;
     }
 }
