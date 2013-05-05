@@ -66,6 +66,16 @@ void PlayerAi::handleActionKey(Actor *owner, int ascii)
 {
     switch (ascii)
     {
+        case 'd': // drop item
+        {
+            Actor *actor = choseFromInventory(owner);
+            if(actor)
+            {
+                actor->pickable->drop(actor, owner);
+                engine.gameStatus = Engine::NEW_TURN;
+            }
+        }
+        break;
         case 'g': // pickup item
         {
             bool found = false;
