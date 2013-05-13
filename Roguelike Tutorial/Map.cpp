@@ -10,6 +10,8 @@ static const int MAX_ROOM_ITEMS = 2;
 Map::Map(int width, int height)
     : width(width), height(height)
 {
+    seed = TCODRandom::getInstance()->getInt(0,0x7FFFFFFF);
+    /*
     bool isTransparent = false;
     bool isWalkable = false;
 
@@ -19,12 +21,26 @@ Map::Map(int width, int height)
     tiles = new Tile[width * height];
 
     buildBSPTree();
+    */
 }
 
 Map::~Map()
 {
     delete map;
     delete [] tiles;
+}
+
+void Map::init(bool withActors)
+{
+    rng = new TCODRandom(seed, TCOD_RNG_CMWC);
+    tiles = new Tile[width * height];
+    map = new TCODMap(width, height);
+
+    // buildBSPTree()?
+    TCODBsp bsp(0, 0, width, height);
+    bsp.splitRecursive(rng, 8, ROOM_MAX_SIZE, ROOM_MAX_SIZE, 1.5f, 1.5f);
+    BspListener listener(*this, ROOM_MIN_SIZE);
+    bsp.traverseInvertedLevelOrder(&listener, (void *)withActors);
 }
 
 bool Map::canWalk(int x, int y) const
@@ -158,9 +174,14 @@ void Map::computeFov()
     map->computeFov(engine.player->x, engine.player->y, engine.fovRadius);
 }
 
-void Map::createRoom(bool first, int x1, int y1, int x2, int y2)
+void Map::createRoom(bool first, int x1, int y1, int x2, int y2, bool withActors)
 {
     dig(x1, y1, x2, y2);
+
+    if(!withActors)
+    {
+        return;
+    }
 
     if(first)
     {

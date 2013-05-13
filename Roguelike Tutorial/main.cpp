@@ -7,6 +7,8 @@ Engine engine(80, 50);
 
 int main()
 {
+    engine.load();
+
     bool exitFlagged;
     while(!TCODConsole::isWindowClosed())
     {
@@ -17,6 +19,8 @@ int main()
         engine.render();
         TCODConsole::flush();
     }
+
+    engine.save();
 
     return 0;
 }

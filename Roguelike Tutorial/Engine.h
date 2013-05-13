@@ -17,8 +17,11 @@ class Engine
 
         Engine(int screenWidth, int screenHeight);
         ~Engine();
-        bool update();
+        void init();
+        void load();
+        void save();
         void render();
+        bool update();
         void sendToBack(Actor *actor);
         bool pickATile(int *x, int *y, float maxRange = 0.0f);
         Actor *getActor(int x, int y) const;
