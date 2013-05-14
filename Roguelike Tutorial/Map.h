@@ -6,7 +6,7 @@ struct Tile {
     Tile() : explored(false) {}
 };
 
-class Map
+class Map : public Persistent
 {
     public:
         int width, height;
@@ -17,6 +17,8 @@ class Map
         void computeFov();
         void render() const;
         void init(bool withActors);
+        void load(TCODZip &zip);
+        void save(TCODZip &zip);
         void addItem(int x, int y);
         void addMonster(int x, int y);
         void dig(int x1, int y1, int x2, int y2);

@@ -57,6 +57,7 @@
 		<Unit filename="Gui.h" />
 		<Unit filename="Map.cpp" />
 		<Unit filename="Map.h" />
+		<Unit filename="Persistent.h" />
 		<Unit filename="Pickable.cpp" />
 		<Unit filename="Pickable.h" />
 		<Unit filename="main.cpp" />

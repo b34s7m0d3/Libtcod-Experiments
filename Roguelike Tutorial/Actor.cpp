@@ -27,6 +27,16 @@ void Actor::update()
     if(ai) ai->update(this);
 }
 
+void Actor::load(TCODZip &zip)
+{
+
+}
+
+void Actor::save(TCODZip &zip)
+{
+
+}
+
 float Actor::getDistance(int cx, int cy) const
 {
     int dx = x - cx;

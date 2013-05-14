@@ -58,6 +58,16 @@ void Gui::render()
     TCODConsole::blit(con, 0, 0, engine.screenWidth, PANEL_HEIGHT, TCODConsole::root, 0, engine.screenHeight-PANEL_HEIGHT);
 }
 
+void Gui::load(TCODZip &zip)
+{
+
+}
+
+void Gui::save(TCODZip &zip)
+{
+
+}
+
 void Gui::renderBar(int x, int y, int width, const char *name, float value, float maxValue, const TCODColor &barColor, const TCODColor &backColor)
 {
     // fill the background

@@ -1,7 +1,7 @@
 #ifndef ACTOR_H
 #define ACTOR_H
 
-class Actor
+class Actor : public Persistent
 {
     public:
         int x, y; // position on map
@@ -19,6 +19,8 @@ class Actor
         ~Actor();
         void render() const; // the const keyword here means that the function does not modify the content of the Actor object
         void update();
+        void load(TCODZip &zip);
+        void save(TCODZip &zip);
         float getDistance(int cx, int cy) const;
 };
 

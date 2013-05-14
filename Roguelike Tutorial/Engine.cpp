@@ -28,12 +28,72 @@ void Engine::init()
 
 void Engine::load()
 {
+    if(TCODSystem::fileExists("game.sav"))
+    {
+        TCODZip zip;
+        zip.loadFromFile("game.sav");
 
+        // load map
+        int width = zip.getInt();
+        int height = zip.getInt();
+        map = new Map(width, height);
+        map->load(zip);
+
+        // load player
+        player = new Actor(0, 0, 0, TCODColor::white, NULL);
+        player->load(zip);
+        actors.push(player);
+
+        // load actors
+        int numOfActors = zip.getInt();
+        while(numOfActors > 0)
+        {
+            Actor *actor = new Actor(0, 0, 0, TCODColor::white, NULL);
+            actor->load(zip);
+            actors.push(actor);
+            numOfActors--;
+        }
+
+        // load message log
+        gui->load(zip);
+    }
+    else
+    {
+        init();
+    }
 }
 
 void Engine::save()
 {
+    if(player->destructible->isDead())
+    {
+        TCODSystem::deleteFile("game.sav");
+    }
+    else
+    {
+        TCODZip zip;
 
+        // save map
+        zip.putInt(map->width);
+        zip.putInt(map->height);
+        map->save(zip);
+
+        // save actors
+        player->save(zip);
+        zip.putInt(actors.size() - 1);
+        for(Actor **iterator = actors.begin(); iterator != actors.end(); iterator++)
+        {
+            if(*iterator != player)
+            {
+                (*iterator)->save(zip);
+            }
+        }
+
+        // save message log
+        gui->save(zip);
+
+        zip.saveToFile("game.sav");
+    }
 }
 
 bool Engine::update()

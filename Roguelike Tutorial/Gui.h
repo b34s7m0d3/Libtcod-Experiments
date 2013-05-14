@@ -2,12 +2,14 @@
 #define GUI_H
 
 
-class Gui
+class Gui : public Persistent
 {
     public:
         Gui();
         ~Gui();
         void render();
+        void load(TCODZip &zip);
+        void save(TCODZip &zip);
         void message(const TCODColor &col, const char *text, ...);
 
     protected:

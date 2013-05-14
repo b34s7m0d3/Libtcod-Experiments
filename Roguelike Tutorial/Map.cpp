@@ -43,6 +43,16 @@ void Map::init(bool withActors)
     bsp.traverseInvertedLevelOrder(&listener, (void *)withActors);
 }
 
+void Map::load(TCODZip &zip)
+{
+
+}
+
+void Map::save(TCODZip &zip)
+{
+
+}
+
 bool Map::canWalk(int x, int y) const
 {
     if(isWall(x,y))

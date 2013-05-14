@@ -714,13 +714,14 @@
 1367773371 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\confuser.cpp
 	"main.h"
 
-1368383662 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\actor.cpp
+1368496703 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\actor.cpp
 	"main.h"
 	<math.h>
 
-1368386813 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\main.h
+1368490882 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\main.h
 	<stdio.h>
 	"libtcod.hpp"
+	"Persistent.h"
 	"Gui.h"
 	"Attacker.h"
 	"Destructible.h"
@@ -876,7 +877,7 @@
 1368383663 c:\users\campbeja_2\projects\libtcod-experiments\libtcod-1.5.2-gcc47\include\txtfield.hpp
 	"color.hpp"
 
-1368383662 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\gui.h
+1368496793 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\gui.h
 
 1368383662 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\attacker.h
 
@@ -888,9 +889,9 @@
 
 1368383662 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\container.h
 
-1368383662 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\actor.h
+1368496615 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\actor.h
 
-1368402359 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\map.h
+1368496350 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\map.h
 
 1368401480 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\engine.h
 
@@ -942,4 +943,6 @@
 
 1368386341 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\pickable.cpp
 	"main.h"
+
+1368490842 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\persistent.h
 
