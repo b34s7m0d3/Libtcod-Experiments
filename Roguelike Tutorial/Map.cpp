@@ -11,17 +11,7 @@ Map::Map(int width, int height)
     : width(width), height(height)
 {
     seed = TCODRandom::getInstance()->getInt(0,0x7FFFFFFF);
-    /*
-    bool isTransparent = false;
-    bool isWalkable = false;
-
-    map = new TCODMap (width, height);
-    map->clear(isTransparent, isWalkable);
-
     tiles = new Tile[width * height];
-
-    buildBSPTree();
-    */
 }
 
 Map::~Map()
@@ -32,25 +22,33 @@ Map::~Map()
 
 void Map::init(bool withActors)
 {
-    rng = new TCODRandom(seed, TCOD_RNG_CMWC);
     tiles = new Tile[width * height];
     map = new TCODMap(width, height);
 
-    // buildBSPTree()?
-    TCODBsp bsp(0, 0, width, height);
-    bsp.splitRecursive(rng, 8, ROOM_MAX_SIZE, ROOM_MAX_SIZE, 1.5f, 1.5f);
-    BspListener listener(*this, ROOM_MIN_SIZE);
-    bsp.traverseInvertedLevelOrder(&listener, (void *)withActors);
+    buildBSPTree(withActors);
 }
 
 void Map::load(TCODZip &zip)
 {
+    seed = zip.getInt();
 
+    if(tiles)
+    {
+        for(int i = 0; i < (width * height); i++)
+        {
+            tiles[i].explored = zip.getInt();
+        }
+    }
 }
 
 void Map::save(TCODZip &zip)
 {
+    zip.putInt(seed);
 
+    for(int i = 0; i < (width * height); i++)
+    {
+        zip.putInt(tiles[i].explored);
+    }
 }
 
 bool Map::canWalk(int x, int y) const
@@ -164,19 +162,21 @@ void Map::addItem(int x, int y)
     }
 }
 
-void Map::buildBSPTree()
+void Map::buildBSPTree(bool withActors)
 {
+    rng = new TCODRandom(seed, TCOD_RNG_CMWC);
+
     // create root node of BSP tree, this node represents the position and size of dungeon
     TCODBsp bsp(0, 0, width, height);
 
     // splitRecursive(TCODRandom *randomizer, int numOfRecursionLvls, int minNodeHeight, int minNodeWidth, float maxNodeH/WRatio, float maxNodeW/HRatio)
-    bsp.splitRecursive(NULL, 8, ROOM_MAX_SIZE, ROOM_MAX_SIZE, 1.5f, 1.5f);
+    bsp.splitRecursive(rng, 8, ROOM_MAX_SIZE, ROOM_MAX_SIZE, 1.5f, 1.5f);
 
     // Define ITCODBspCallback's virtual method: bool visitNode(TCODBsp *node, void *userData)
-    BspListener listener(* this, ROOM_MIN_SIZE);
+    BspListener listener(*this, ROOM_MIN_SIZE);
 
     // Call BspListener's visitNode() for each node in BSP tree, starting with last most level of nodes created
-    bsp.traverseInvertedLevelOrder(&listener, NULL);
+    bsp.traverseInvertedLevelOrder(&listener, (void *)withActors);
 }
 
 void Map::computeFov()

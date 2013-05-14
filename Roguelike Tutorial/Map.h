@@ -36,7 +36,7 @@ class Map : public Persistent
         friend class BspListener;
 
     private:
-        void buildBSPTree();
+        void buildBSPTree(bool withActors);
 };
 
 #endif // MAP_H

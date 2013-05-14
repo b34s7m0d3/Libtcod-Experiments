@@ -20,7 +20,7 @@ int main()
         TCODConsole::flush();
     }
 
-    engine.save();
+    //engine.save();
 
     return 0;
 }

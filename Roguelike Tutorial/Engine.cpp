@@ -22,6 +22,7 @@ void Engine::init()
     player->container = new Container(26);
     actors.push(player);
     map = new Map(screenWidth, screenHeight - 7);
+    map->init(true);
 
     gui->message(TCODColor::red, "Welcome stranger!\nPrepare to perish in the Tombs of the Ancient Kings.");
 }
@@ -38,7 +39,7 @@ void Engine::load()
         int height = zip.getInt();
         map = new Map(width, height);
         map->load(zip);
-
+        /*
         // load player
         player = new Actor(0, 0, 0, TCODColor::white, NULL);
         player->load(zip);
@@ -52,10 +53,11 @@ void Engine::load()
             actor->load(zip);
             actors.push(actor);
             numOfActors--;
-        }
+        }*/
 
         // load message log
         gui->load(zip);
+
     }
     else
     {
@@ -77,7 +79,7 @@ void Engine::save()
         zip.putInt(map->width);
         zip.putInt(map->height);
         map->save(zip);
-
+        /*
         // save actors
         player->save(zip);
         zip.putInt(actors.size() - 1);
@@ -87,7 +89,7 @@ void Engine::save()
             {
                 (*iterator)->save(zip);
             }
-        }
+        }*/
 
         // save message log
         gui->save(zip);
@@ -108,7 +110,6 @@ bool Engine::update()
     {
         for(Actor **iterator = actors.begin(); iterator != actors.end(); iterator++)
         {
-            // why do we have to have *actor?
             Actor *actor = *iterator;
             if(actor != player)
             {

@@ -60,12 +60,25 @@ void Gui::render()
 
 void Gui::load(TCODZip &zip)
 {
-
+    zip.putInt(log.size());
+    for(Message **iterator = log.begin(); iterator != log.end(); iterator++)
+    {
+        zip.putString((*iterator)->text);
+        zip.putColor(&(*iterator)->col);
+    }
 }
 
 void Gui::save(TCODZip &zip)
 {
+    int numOfMessages = zip.getInt();
+    while(numOfMessages > 0)
+    {
+        const char *text = zip.getString();
+        TCODColor col = zip.getColor();
+        message(col, text);
 
+        numOfMessages--;
+    }
 }
 
 void Gui::renderBar(int x, int y, int width, const char *name, float value, float maxValue, const TCODColor &barColor, const TCODColor &backColor)
