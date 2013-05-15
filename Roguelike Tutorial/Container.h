@@ -2,7 +2,7 @@
 #define CONTAINER_H
 
 
-class Container
+class Container : public Persistent
 {
     public:
         int size; // max number of actors. 0 = unlimited.
@@ -12,6 +12,8 @@ class Container
         ~Container();
         bool add(Actor *actor);
         void remove(Actor *actor);
+        void load(TCODZip &zip);
+        void save(TCODZip &zip);
     protected:
     private:
 };

@@ -5,6 +5,16 @@ Attacker::Attacker(float power) : power(power)
     //ctor
 }
 
+void Attacker::load(TCODZip &zip)
+{
+    power = zip.getFloat();
+}
+
+void Attacker::save(TCODZip &zip)
+{
+    zip.putFloat(power);
+}
+
 void Attacker::attack(Actor *owner, Actor *target)
 {
     if(target->destructible && !target->destructible->isDead())

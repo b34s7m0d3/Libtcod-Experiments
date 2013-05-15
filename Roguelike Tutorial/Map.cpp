@@ -22,9 +22,7 @@ Map::~Map()
 
 void Map::init(bool withActors)
 {
-    tiles = new Tile[width * height];
     map = new TCODMap(width, height);
-
     buildBSPTree(withActors);
 }
 

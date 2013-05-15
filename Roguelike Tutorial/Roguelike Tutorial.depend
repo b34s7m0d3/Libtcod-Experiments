@@ -714,7 +714,7 @@
 1367773371 source:c:\users\campbeja\documents\my projects\libtcod\roguelike tutorial\confuser.cpp
 	"main.h"
 
-1368496703 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\actor.cpp
+1368574159 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\actor.cpp
 	"main.h"
 	<math.h>
 
@@ -879,19 +879,19 @@
 
 1368496793 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\gui.h
 
-1368383662 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\attacker.h
+1368574931 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\attacker.h
 
-1368383662 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\destructible.h
+1368577595 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\destructible.h
 
 1368383662 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\ai.h
 
 1368386051 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\pickable.h
 
-1368383662 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\container.h
+1368581731 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\container.h
 
 1368496615 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\actor.h
 
-1368496350 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\map.h
+1368574159 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\map.h
 
 1368401480 c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\engine.h
 
@@ -904,7 +904,7 @@
 	<math.h>
 	<windows.h>
 
-1368383662 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\attacker.cpp
+1368575161 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\attacker.cpp
 	"main.h"
 
 1368408008 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\bsplistener.cpp
@@ -913,19 +913,19 @@
 1368383662 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\confuser.cpp
 	"main.h"
 
-1368383662 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\container.cpp
+1368581836 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\container.cpp
 	"main.h"
 
 1368383662 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\destructible.cpp
 	"main.h"
 
-1368401695 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\engine.cpp
+1368574159 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\engine.cpp
 	"main.h"
 
 1368383662 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\fireball.cpp
 	"main.h"
 
-1368383662 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\gui.cpp
+1368574159 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\gui.cpp
 	"main.h"
 	"stdarg.h"
 
@@ -935,10 +935,10 @@
 1368383662 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\lightningbolt.cpp
 	"main.h"
 
-1368401839 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\main.cpp
+1368574159 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\main.cpp
 	"main.h"
 
-1368383662 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\map.cpp
+1368574733 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\map.cpp
 	"main.h"
 
 1368386341 source:c:\users\campbeja_2\projects\libtcod-experiments\roguelike tutorial\pickable.cpp
