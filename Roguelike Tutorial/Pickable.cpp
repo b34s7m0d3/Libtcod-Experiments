@@ -39,6 +39,23 @@ bool Pickable::use(Actor *owner, Actor *wearer)
     return false;
 }
 
+Pickable *Pickable::create(TCODZip &zip)
+{
+    PickableType type = (PickableType)zip.getInt();
+
+    Pickable *pickable = NULL;
+    switch(type)
+    {
+        case HEALER: pickable = new Healer(0.0f); break;
+        case LIGHTNING_BOLT: pickable = new LightningBolt(0.0f, 0.0f); break;
+        case CONFUSER: pickable = new Confuser(0, 0.0f); break;
+        case FIREBALL: pickable = new Fireball(0.0f, 0.0f); break;
+    }
+
+    pickable->load(zip);
+    return pickable;
+}
+
 Healer::Healer(float amount) : amount(amount)
 {
 }
@@ -56,6 +73,17 @@ bool Healer::use(Actor *owner, Actor *wearer)
     }
 
     return false;
+}
+
+void Healer::load(TCODZip &zip)
+{
+    amount = zip.getFloat();
+}
+
+void Healer::save(TCODZip &zip)
+{
+    zip.putInt(HEALER);
+    zip.putFloat(amount);
 }
 
 Confuser::Confuser(int nbTurns, float range) : nbTurns(nbTurns), range(range)
@@ -87,6 +115,19 @@ bool Confuser::use(Actor *owner, Actor *wearer)
     return Pickable::use(owner, wearer);
 }
 
+void Confuser::load(TCODZip &zip)
+{
+    nbTurns = zip.getInt();
+    range = zip.getFloat();
+}
+
+void Confuser::save(TCODZip &zip)
+{
+    zip.putInt(CONFUSER);
+    zip.putInt(nbTurns);
+    zip.putFloat(range);
+}
+
 LightningBolt::LightningBolt(float range, float damage) : range(range), damage(damage)
 {
 }
@@ -105,6 +146,19 @@ bool LightningBolt::use(Actor *owner, Actor *wearer)
     closestMonster->destructible->takeDamage(closestMonster, damage);
 
     return Pickable::use(owner, wearer);
+}
+
+void LightningBolt::load(TCODZip &zip)
+{
+    range = zip.getFloat();
+    damage = zip.getFloat();
+}
+
+void LightningBolt::save(TCODZip &zip)
+{
+    zip.putInt(LIGHTNING_BOLT);
+    zip.putFloat(range);
+    zip.putFloat(damage);
 }
 
 Fireball::Fireball(float range, float damage) : LightningBolt(range, damage)
@@ -133,4 +187,11 @@ bool Fireball::use(Actor *owner, Actor *wearer)
     }
 
     return Pickable::use(owner, wearer);
+}
+
+void Fireball::save(TCODZip &zip)
+{
+    zip.putInt(FIREBALL);
+    zip.putFloat(range);
+    zip.putFloat(damage);
 }

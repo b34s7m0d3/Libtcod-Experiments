@@ -39,7 +39,7 @@ void Engine::load()
         int height = zip.getInt();
         map = new Map(width, height);
         map->load(zip);
-        /*
+
         // load player
         player = new Actor(0, 0, 0, TCODColor::white, NULL);
         player->load(zip);
@@ -53,7 +53,7 @@ void Engine::load()
             actor->load(zip);
             actors.push(actor);
             numOfActors--;
-        }*/
+        }
 
         // load message log
         gui->load(zip);

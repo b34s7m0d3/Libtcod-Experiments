@@ -7,7 +7,7 @@ class Actor : public Persistent
         int x, y; // position on map
         int ch; // ascii code
         TCODColor col; // color
-        const char *name; // actor name
+        char *name; // actor name
         bool blocks;
         Attacker *attacker;
         Destructible *destructible;

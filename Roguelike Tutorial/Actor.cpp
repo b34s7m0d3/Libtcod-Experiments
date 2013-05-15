@@ -2,9 +2,9 @@
 #include <math.h>
 
 Actor::Actor(int x, int y, int ch, const TCODColor &col, const char *name)
-    : x(x), y(y), ch(ch), col(col), name(name), blocks(true), attacker(NULL), destructible(NULL), ai(NULL), pickable(NULL), container(NULL)
+    : x(x), y(y), ch(ch), col(col), blocks(true), attacker(NULL), destructible(NULL), ai(NULL), pickable(NULL), container(NULL)
 {
-    //ctor
+    this->name = strdup(name);
 }
 
 Actor::~Actor()
@@ -14,6 +14,8 @@ Actor::~Actor()
     if(ai) delete ai;
     if(pickable) delete pickable;
     if(container) delete container;
+
+    free(name);
 }
 
 void Actor::render() const
@@ -33,7 +35,7 @@ void Actor::load(TCODZip &zip)
     y = zip.getInt();
     ch = zip.getInt();
     col = zip.getColor();
-    name = zip.getString();
+    name = strdup(zip.getString());
     blocks = zip.getInt();
     bool hasAttacker = zip.getInt();
     bool hasDestructible = zip.getInt();
@@ -44,27 +46,28 @@ void Actor::load(TCODZip &zip)
     if(hasAttacker)
     {
         attacker = new Attacker(0.0f);
-        // load attacker
+        attacker->load(zip);
     }
 
     if(hasDestructible)
     {
-        // load destructible
+        destructible = Destructible::create(zip);
     }
 
     if(hasAI)
     {
-        // load ai
+        ai = Ai::create(zip);
     }
 
     if(hasPickable)
     {
-        // load pickable
+        pickable = Pickable::create(zip);
     }
 
     if(hasContainer)
     {
-        // load container
+        container = new Container(0);
+        container->load(zip);
     }
 }
 
@@ -84,27 +87,27 @@ void Actor::save(TCODZip &zip)
 
     if(attacker)
     {
-        // save attacker
+        attacker->save(zip);
     }
 
     if(destructible)
     {
-        // save destructible
+        destructible->save(zip);
     }
 
     if(ai)
     {
-        // save ai
+        ai->save(zip);
     }
 
     if(pickable)
     {
-        // save pickable
+        pickable->save(zip);
     }
 
     if(container)
     {
-        // save container
+        container->save(zip);
     }
 }
 
