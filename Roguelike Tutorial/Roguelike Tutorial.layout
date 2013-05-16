@@ -1,6 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
+	<File name="Pickable.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="76" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="17" />
+			<Collapse line="30" />
+			<Collapse line="42" />
+			<Collapse line="53" />
+		</Folding>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="433" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="main.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="256" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="Ai.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="399" topLine="0" />
@@ -50,9 +71,9 @@
 			<Collapse line="263" />
 		</Folding>
 	</File>
-	<File name="BspListener.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="BspListener.cpp" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="601" topLine="0" />
+			<Cursor1 position="477" topLine="13" />
 		</Cursor>
 	</File>
 	<File name="BspListener.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -76,10 +97,22 @@
 			<Cursor1 position="282" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="Destructible.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Destructible.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2783" topLine="18" />
+			<Cursor1 position="2680" topLine="29" />
 		</Cursor>
+		<Folding>
+			<Collapse line="4" />
+			<Collapse line="9" />
+			<Collapse line="15" />
+			<Collapse line="20" />
+			<Collapse line="39" />
+			<Collapse line="57" />
+			<Collapse line="76" />
+			<Collapse line="89" />
+			<Collapse line="106" />
+			<Collapse line="122" />
+		</Folding>
 	</File>
 	<File name="Destructible.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
@@ -88,8 +121,19 @@
 	</File>
 	<File name="Engine.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1731" topLine="42" />
+			<Cursor1 position="770" topLine="6" />
 		</Cursor>
+		<Folding>
+			<Collapse line="3" />
+			<Collapse line="9" />
+			<Collapse line="30" />
+			<Collapse line="68" />
+			<Collapse line="124" />
+			<Collapse line="148" />
+			<Collapse line="154" />
+			<Collapse line="203" />
+			<Collapse line="217" />
+		</Folding>
 	</File>
 	<File name="Engine.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
@@ -98,7 +142,7 @@
 	</File>
 	<File name="Gui.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1512" topLine="43" />
+			<Cursor1 position="1476" topLine="55" />
 		</Cursor>
 	</File>
 	<File name="Gui.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -106,19 +150,21 @@
 			<Cursor1 position="204" topLine="11" />
 		</Cursor>
 	</File>
-	<File name="Map.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Map.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="550" topLine="11" />
+			<Cursor1 position="4716" topLine="53" />
 		</Cursor>
 		<Folding>
+			<Collapse line="11" />
+			<Collapse line="17" />
+			<Collapse line="29" />
+			<Collapse line="42" />
 			<Collapse line="52" />
 			<Collapse line="71" />
 			<Collapse line="76" />
 			<Collapse line="90" />
 			<Collapse line="100" />
 			<Collapse line="124" />
-			<Collapse line="163" />
-			<Collapse line="180" />
 			<Collapse line="185" />
 			<Collapse line="232" />
 			<Collapse line="260" />
@@ -151,26 +197,5 @@
 			<Collapse line="164" />
 			<Collapse line="168" />
 		</Folding>
-	</File>
-	<File name="Pickable.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="76" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="17" />
-			<Collapse line="30" />
-			<Collapse line="42" />
-			<Collapse line="53" />
-		</Folding>
-	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="433" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="main.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="256" topLine="0" />
-		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

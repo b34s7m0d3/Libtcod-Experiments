@@ -60,16 +60,6 @@ void Gui::render()
 
 void Gui::load(TCODZip &zip)
 {
-    zip.putInt(log.size());
-    for(Message **iterator = log.begin(); iterator != log.end(); iterator++)
-    {
-        zip.putString((*iterator)->text);
-        zip.putColor(&(*iterator)->col);
-    }
-}
-
-void Gui::save(TCODZip &zip)
-{
     int numOfMessages = zip.getInt();
     while(numOfMessages > 0)
     {
@@ -78,6 +68,16 @@ void Gui::save(TCODZip &zip)
         message(col, text);
 
         numOfMessages--;
+    }
+}
+
+void Gui::save(TCODZip &zip)
+{
+    zip.putInt(log.size());
+    for(Message **iterator = log.begin(); iterator != log.end(); iterator++)
+    {
+        zip.putString((*iterator)->text);
+        zip.putColor(&(*iterator)->col);
     }
 }
 

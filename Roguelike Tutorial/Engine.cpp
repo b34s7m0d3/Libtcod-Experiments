@@ -79,7 +79,7 @@ void Engine::save()
         zip.putInt(map->width);
         zip.putInt(map->height);
         map->save(zip);
-        /*
+
         // save actors
         player->save(zip);
         zip.putInt(actors.size() - 1);
@@ -89,7 +89,7 @@ void Engine::save()
             {
                 (*iterator)->save(zip);
             }
-        }*/
+        }
 
         // save message log
         gui->save(zip);
