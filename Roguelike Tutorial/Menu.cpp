@@ -40,7 +40,7 @@ Menu::MenuItemCode Menu::pick()
                 TCODConsole::root->setDefaultForeground(TCODColor::lightGrey);
             }
 
-            TCODConsole::root->print(10, 10 + currentItem + 3, (*iterator)->label);
+            TCODConsole::root->print(10, 10 + currentItem * 3, (*iterator)->label);
             currentItem++;
         }
 

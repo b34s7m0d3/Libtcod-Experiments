@@ -9,12 +9,12 @@ int main()
 {
     engine.load();
 
-    bool exitFlagged;
+    //bool exitFlagged;
     while(!TCODConsole::isWindowClosed())
     {
-        exitFlagged = engine.update();
-        if(exitFlagged)
-            break;
+        engine.update();
+        //if(exitFlagged)
+        //    break;
 
         engine.render();
         TCODConsole::flush();

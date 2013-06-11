@@ -22,7 +22,7 @@ class Engine
         void load();
         void save();
         void render();
-        bool update();
+        void update();
         void sendToBack(Actor *actor);
         bool pickATile(int *x, int *y, float maxRange = 0.0f);
         Actor *getActor(int x, int y) const;
