@@ -1,6 +1,6 @@
 #include "main.h"
 
-Engine::Engine(int screenWidth, int screenHeight) : gameStatus(STARTUP), fovRadius(10), screenWidth(screenWidth), screenHeight(screenHeight)
+Engine::Engine(int screenWidth, int screenHeight) : gameStatus(), fovRadius(10), screenWidth(screenWidth), screenHeight(screenHeight)
 {
     TCODConsole::initRoot(screenWidth, screenHeight, "libtcod C++ tutorial", false);
     gui = new Gui();
@@ -25,11 +25,39 @@ void Engine::init()
     map->init(true);
 
     gui->message(TCODColor::red, "Welcome stranger!\nPrepare to perish in the Tombs of the Ancient Kings.");
+    gameStatus = STARTUP;
+}
+
+void Engine::term()
+{
+    actors.clearAndDelete();
+
+    if(map) delete map;
+
+    gui->clear();
 }
 
 void Engine::load()
 {
+    engine.gui->menu.clear();
+    engine.gui->menu.addItem(Menu::NEW_GAME, "New game");
     if(TCODSystem::fileExists("game.sav"))
+    {
+        engine.gui->menu.addItem(Menu::CONTINUE, "Continue");
+    }
+    engine.gui->menu.addItem(Menu::EXIT, "Exit");
+
+    Menu::MenuItemCode menuItem = engine.gui->menu.pick();
+    if(menuItem == Menu::EXIT || menuItem == Menu::NONE)
+    {
+        exit(0);
+    }
+    else if(menuItem == Menu::NEW_GAME)
+    {
+        engine.term();
+        engine.init();
+    }
+    else
     {
         TCODZip zip;
         zip.loadFromFile("game.sav");
@@ -58,10 +86,8 @@ void Engine::load()
         // load message log
         gui->load(zip);
 
-    }
-    else
-    {
-        init();
+        // to force FOV recomputation
+        gameStatus = STARTUP;
     }
 }
 
@@ -129,7 +155,7 @@ void Engine::render()
     map->render();
 
     // draw the actors
-    for(Actor **iterator=actors.begin(); iterator != actors.end(); iterator++) // **iterator is a pointer to a pointer?
+    for(Actor **iterator=actors.begin(); iterator != actors.end(); iterator++)
     {
         Actor *actor = *iterator;
         if(map->isInFov(actor->x, actor->y))

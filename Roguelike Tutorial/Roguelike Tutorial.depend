@@ -1170,10 +1170,11 @@
 	"main.h"
 	<math.h>
 
-1368551305 c:\users\jcampb13\projects\libtcod\roguelike tutorial\main.h
+1370983070 c:\users\jcampb13\projects\libtcod\roguelike tutorial\main.h
 	<stdio.h>
 	"libtcod.hpp"
 	"Persistent.h"
+	"Menu.h"
 	"Gui.h"
 	"Attacker.h"
 	"Destructible.h"
@@ -1331,7 +1332,7 @@
 
 1368551305 c:\users\jcampb13\projects\libtcod\roguelike tutorial\persistent.h
 
-1368551305 c:\users\jcampb13\projects\libtcod\roguelike tutorial\gui.h
+1370983598 c:\users\jcampb13\projects\libtcod\roguelike tutorial\gui.h
 
 1368622562 c:\users\jcampb13\projects\libtcod\roguelike tutorial\attacker.h
 
@@ -1347,7 +1348,7 @@
 
 1368553251 c:\users\jcampb13\projects\libtcod\roguelike tutorial\map.h
 
-1368453504 c:\users\jcampb13\projects\libtcod\roguelike tutorial\engine.h
+1370971633 c:\users\jcampb13\projects\libtcod\roguelike tutorial\engine.h
 
 1365184013 c:\users\jcampb13\projects\libtcod\roguelike tutorial\bsplistener.h
 	"libtcod.hpp"
@@ -1370,10 +1371,10 @@
 1368646978 source:c:\users\jcampb13\projects\libtcod\roguelike tutorial\destructible.cpp
 	"main.h"
 
-1368720383 source:c:\users\jcampb13\projects\libtcod\roguelike tutorial\engine.cpp
+1370984577 source:c:\users\jcampb13\projects\libtcod\roguelike tutorial\engine.cpp
 	"main.h"
 
-1368720355 source:c:\users\jcampb13\projects\libtcod\roguelike tutorial\gui.cpp
+1370977209 source:c:\users\jcampb13\projects\libtcod\roguelike tutorial\gui.cpp
 	"main.h"
 	"stdarg.h"
 
@@ -1381,5 +1382,13 @@
 	"main.h"
 
 1369427242 source:c:\users\jcampb13\projects\libtcod\roguelike tutorial\map.cpp
+	"main.h"
+
+1369427309 source:c:\users\jcampb13\projects\libtcod\roguelike tutorial\main.cpp
+	"main.h"
+
+1370979325 c:\users\jcampb13\projects\libtcod\roguelike tutorial\menu.h
+
+1370984744 source:c:\users\jcampb13\projects\libtcod\roguelike tutorial\menu.cpp
 	"main.h"
 

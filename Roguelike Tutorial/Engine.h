@@ -18,6 +18,7 @@ class Engine
         Engine(int screenWidth, int screenHeight);
         ~Engine();
         void init();
+        void term();
         void load();
         void save();
         void render();

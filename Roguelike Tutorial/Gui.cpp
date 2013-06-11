@@ -58,6 +58,11 @@ void Gui::render()
     TCODConsole::blit(con, 0, 0, engine.screenWidth, PANEL_HEIGHT, TCODConsole::root, 0, engine.screenHeight-PANEL_HEIGHT);
 }
 
+void Gui::clear()
+{
+    log.clearAndDelete();
+}
+
 void Gui::load(TCODZip &zip)
 {
     int numOfMessages = zip.getInt();

@@ -5,9 +5,12 @@
 class Gui : public Persistent
 {
     public:
+        Menu menu;
+
         Gui();
         ~Gui();
         void render();
+        void clear();
         void load(TCODZip &zip);
         void save(TCODZip &zip);
         void message(const TCODColor &col, const char *text, ...);
