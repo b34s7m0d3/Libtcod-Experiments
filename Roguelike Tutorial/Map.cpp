@@ -29,6 +29,7 @@ void Map::init(bool withActors)
 void Map::load(TCODZip &zip)
 {
     seed = zip.getInt();
+    init(false);
 
     if(tiles)
     {
