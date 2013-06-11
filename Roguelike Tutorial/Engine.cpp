@@ -8,8 +8,7 @@ Engine::Engine(int screenWidth, int screenHeight) : gameStatus(), fovRadius(10),
 
 Engine::~Engine()
 {
-    actors.clearAndDelete();
-    delete map;
+    term();
     delete gui;
 }
 
@@ -60,6 +59,7 @@ void Engine::load()
     else
     {
         TCODZip zip;
+        engine.term();
         zip.loadFromFile("game.sav");
 
         // load map
@@ -177,7 +177,7 @@ void Engine::render()
 void Engine::sendToBack(Actor *actor)
 {
     actors.remove(actor);
-    actors.insertBefore(actor,0);
+    actors.insertBefore(actor, 0);
 }
 
 bool Engine::pickATile(int *x, int *y, float maxRange)
