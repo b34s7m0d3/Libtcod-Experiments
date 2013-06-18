@@ -7,6 +7,7 @@ class Engine
         enum GameStatus { STARTUP, IDLE, NEW_TURN, VICTORY, DEFEAT } gameStatus;
         TCODList<Actor *> actors;
         Actor *player;
+        Actor *stairs;
         Map *map;
         int fovRadius;
         int screenWidth;

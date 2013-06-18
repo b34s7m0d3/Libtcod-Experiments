@@ -20,6 +20,11 @@ void Engine::init()
     player->ai = new PlayerAi();
     player->container = new Container(26);
     actors.push(player);
+
+    stairs = new Actor(0, 0, '>', TCODColor::white, "stairs");
+    stairs->blocks = false;
+    actors.push(stairs);
+
     map = new Map(screenWidth, screenHeight - 7);
     map->init(true);
 
@@ -73,6 +78,11 @@ void Engine::load()
         player->load(zip);
         actors.push(player);
 
+        // load stairs
+        stairs = new Actor(0, 0, 0, TCODColor::white, NULL);
+        stairs->load(zip);
+        actors.push(stairs);
+
         // load actors
         int numOfActors = zip.getInt();
         while(numOfActors > 0)
@@ -108,10 +118,11 @@ void Engine::save()
 
         // save actors
         player->save(zip);
-        zip.putInt(actors.size() - 1);
+        stairs->save(zip);
+        zip.putInt(actors.size() - 2);
         for(Actor **iterator = actors.begin(); iterator != actors.end(); iterator++)
         {
-            if(*iterator != player)
+            if(*iterator != player && *iterator != stairs)
             {
                 (*iterator)->save(zip);
             }
