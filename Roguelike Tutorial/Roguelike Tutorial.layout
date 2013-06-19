@@ -1,9 +1,71 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-	<File name="Ai.cpp" open="1" top="1" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="Destructible.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2274" topLine="59" />
+			<Cursor1 position="1250" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="Engine.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5102" topLine="42" />
+		</Cursor>
+		<Folding>
+			<Collapse line="4" />
+			<Collapse line="10" />
+			<Collapse line="36" />
+			<Collapse line="45" />
+			<Collapse line="105" />
+			<Collapse line="139" />
+			<Collapse line="165" />
+			<Collapse line="214" />
+			<Collapse line="220" />
+			<Collapse line="269" />
+			<Collapse line="283" />
+		</Folding>
+	</File>
+	<File name="Engine.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="661" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Gui.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1788" topLine="6" />
+		</Cursor>
+		<Folding>
+			<Collapse line="9" />
+			<Collapse line="14" />
+			<Collapse line="20" />
+			<Collapse line="24" />
+			<Collapse line="29" />
+			<Collapse line="61" />
+			<Collapse line="66" />
+			<Collapse line="79" />
+			<Collapse line="89" />
+			<Collapse line="108" />
+			<Collapse line="139" />
+		</Folding>
+	</File>
+	<File name="Gui.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="101" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="Map.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1223" topLine="18" />
+		</Cursor>
+		<Folding>
+			<Collapse line="11" />
+			<Collapse line="17" />
+			<Collapse line="23" />
+			<Collapse line="29" />
+		</Folding>
+	</File>
+	<File name="Map.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="434" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="Menu.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -11,9 +73,19 @@
 			<Cursor1 position="287" topLine="47" />
 		</Cursor>
 	</File>
+	<File name="Ai.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="584" topLine="12" />
+		</Cursor>
+	</File>
 	<File name="Persistent.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Attacker.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="194" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="Pickable.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -34,6 +106,11 @@
 			<Collapse line="168" />
 		</Folding>
 	</File>
+	<File name="Attacker.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="202" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="Pickable.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="76" topLine="0" />
@@ -45,14 +122,34 @@
 			<Collapse line="53" />
 		</Folding>
 	</File>
+	<File name="BspListener.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="540" topLine="13" />
+		</Cursor>
+	</File>
 	<File name="main.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="489" topLine="1" />
 		</Cursor>
 	</File>
+	<File name="Actor.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="340" topLine="0" />
+		</Cursor>
+	</File>
 	<File name="main.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="288" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Actor.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="195" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Ai.cpp" open="1" top="1" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2062" topLine="65" />
 		</Cursor>
 	</File>
 	<File name="BspListener.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -92,96 +189,5 @@
 			<Collapse line="106" />
 			<Collapse line="122" />
 		</Folding>
-	</File>
-	<File name="Destructible.h" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1250" topLine="1" />
-		</Cursor>
-	</File>
-	<File name="Ai.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="584" topLine="12" />
-		</Cursor>
-	</File>
-	<File name="Engine.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="5171" topLine="33" />
-		</Cursor>
-		<Folding>
-			<Collapse line="4" />
-			<Collapse line="10" />
-			<Collapse line="16" />
-			<Collapse line="36" />
-			<Collapse line="45" />
-		</Folding>
-	</File>
-	<File name="Attacker.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="194" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Engine.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="661" topLine="6" />
-		</Cursor>
-	</File>
-	<File name="Attacker.h" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="202" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Gui.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1788" topLine="6" />
-		</Cursor>
-		<Folding>
-			<Collapse line="9" />
-			<Collapse line="14" />
-			<Collapse line="20" />
-			<Collapse line="24" />
-			<Collapse line="29" />
-			<Collapse line="61" />
-			<Collapse line="66" />
-			<Collapse line="79" />
-			<Collapse line="89" />
-			<Collapse line="108" />
-			<Collapse line="139" />
-		</Folding>
-	</File>
-	<File name="BspListener.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="540" topLine="13" />
-		</Cursor>
-	</File>
-	<File name="Gui.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="101" topLine="6" />
-		</Cursor>
-	</File>
-	<File name="Actor.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="340" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Map.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1223" topLine="18" />
-		</Cursor>
-		<Folding>
-			<Collapse line="11" />
-			<Collapse line="17" />
-			<Collapse line="23" />
-			<Collapse line="29" />
-		</Folding>
-	</File>
-	<File name="Actor.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="195" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Map.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="434" topLine="0" />
-		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

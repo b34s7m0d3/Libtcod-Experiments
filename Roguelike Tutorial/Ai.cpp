@@ -67,9 +67,18 @@ bool PlayerAi::moveOrAttack(Actor *owner, int targetx, int targety)
     {
         Actor *actor = *iterator;
         bool corpseOrItem = (actor->destructible && actor->destructible->isDead()) || actor->pickable;
-        if(corpseOrItem && actor->x == targetx && actor->y == targety)
+        bool isStairs = (actor == engine.stairs);
+
+        if(actor->x == targetx && actor->y == targety)
         {
-            engine.gui->message(TCODColor::lightGrey, "There's a %s here", actor->name);
+            if(corpseOrItem)
+            {
+                engine.gui->message(TCODColor::lightGrey, "There's a %s here", actor->name);
+            }
+            else if(isStairs)
+            {
+                engine.nextLevel();
+            }
         }
     }
 
