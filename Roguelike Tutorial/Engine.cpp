@@ -1,6 +1,7 @@
 #include "main.h"
 
-Engine::Engine(int screenWidth, int screenHeight) : gameStatus(), fovRadius(10), screenWidth(screenWidth), screenHeight(screenHeight)
+Engine::Engine(int screenWidth, int screenHeight) : gameStatus(), fovRadius(10),
+    screenWidth(screenWidth), screenHeight(screenHeight), level(1)
 {
     TCODConsole::initRoot(screenWidth, screenHeight, "libtcod C++ tutorial", false);
     gui = new Gui();
@@ -183,6 +184,31 @@ void Engine::render()
 
 	// show the player's stats
 	TCODConsole::root->print(1, screenHeight-2, "HP : %d/%d", (int)player->destructible->hp, (int)player->destructible->maxHp);
+}
+
+void Engine::nextLevel()
+{
+    level++;
+
+    gui->message(TCODColor::lightViolet,"You take a moment to rest, and recover your strength.");
+    player->destructible->heal(player->destructible->maxHp/2);
+    gui->message(TCODColor::red,"After a rare moment of peace, you descend\ndeeper into the heart of the dungeon...");
+
+    // discard old map and contents
+    delete map;
+    for(Actor **iterator = actors.begin(); iterator != actors.end(); iterator++)
+    {
+        if(*iterator != player && *iterator != stairs)
+        {
+            delete *iterator;
+            iterator = actors.remove(iterator);
+        }
+    }
+
+    // create a new map
+    map = new Map(screenWidth, screenHeight - 7);
+    map->init(true);
+    gameStatus=STARTUP;
 }
 
 void Engine::sendToBack(Actor *actor)

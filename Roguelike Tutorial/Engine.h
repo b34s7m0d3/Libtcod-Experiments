@@ -12,6 +12,7 @@ class Engine
         int fovRadius;
         int screenWidth;
         int screenHeight;
+        int level;
         Gui *gui;
         TCOD_key_t lastKey;
         TCOD_mouse_t mouse;
@@ -24,6 +25,7 @@ class Engine
         void save();
         void render();
         void update();
+        void nextLevel();
         void sendToBack(Actor *actor);
         bool pickATile(int *x, int *y, float maxRange = 0.0f);
         Actor *getActor(int x, int y) const;
